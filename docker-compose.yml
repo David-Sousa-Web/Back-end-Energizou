@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: "teste-energizou"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "DObMeWI0bzWEQ1IBgO4SXw"
+      MYSQL_ROOT_PASSWORD: "xkRDSEdfZARhyQEj1R0Mbg"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - my-db:/var/lib/mysql
+volumes:
+  my-db:
