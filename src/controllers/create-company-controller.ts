@@ -3,7 +3,7 @@ import { z } from "zod";
 import { hash } from "bcryptjs";
 import { companyRepository } from "../repositories/company-repository";
 
-export class CompanyController {
+export class CreateCompanyController {
   async CreateCompany(req: Request, res: Response) {
     const companyBodySchema = z.object({
       NomedoCliente: z.string(),

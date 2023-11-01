@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { CompanyController } from "./controllers/company-controller";
+import { CreateCompanyController } from "./controllers/create-company-controller";
 
 const routes = Router();
 
-routes.post("/company", new CompanyController().CreateCompany);
+routes.post("/company", new CreateCompanyController().CreateCompany);
 
 export default routes;
