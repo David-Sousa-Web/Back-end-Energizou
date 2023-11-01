@@ -3,6 +3,7 @@ import "reflect-metadata";
 import { env } from "../env";
 import { Company } from "../entities/company";
 import { default1698814938363 } from "../migrations/1698814938363-default";
+import { default1698876279787 } from "../migrations/1698876279787-default";
 
 export const AppDataSource = new DataSource({
   type: "mysql",
@@ -12,5 +13,5 @@ export const AppDataSource = new DataSource({
   password: env.DB_PASSWORD,
   database: env.DB_DATABASE,
   entities: [Company],
-  migrations: [default1698814938363],
+  migrations: [default1698814938363, default1698876279787],
 });

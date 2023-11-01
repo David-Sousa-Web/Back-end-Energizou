@@ -8,6 +8,7 @@ export class UpdateCompanyController {
     const companyBodySchema = z.object({
       NomedoCliente: z.string(),
       Senha: z.string().min(6),
+      NomedaEmpresa: z.string(),
       CEP: z.string(),
       Endereco: z.string(),
       Numero: z.number(),
@@ -15,8 +16,16 @@ export class UpdateCompanyController {
       Email: z.string().email(),
     });
 
-    const { NomedoCliente, Senha, CEP, Endereco, Numero, Telefone, Email } =
-      companyBodySchema.parse(req.body);
+    const {
+      NomedoCliente,
+      Senha,
+      NomedaEmpresa,
+      CEP,
+      Endereco,
+      Numero,
+      Telefone,
+      Email,
+    } = companyBodySchema.parse(req.body);
     const companyID = req.params.id;
 
     const company = companyRepository.findOneBy({ Id: String(companyID) });
@@ -31,6 +40,7 @@ export class UpdateCompanyController {
       await companyRepository.update(companyID, {
         NomedoCliente,
         Senha: password_hash,
+        NomedaEmpresa,
         CEP,
         Endereco,
         Numero,

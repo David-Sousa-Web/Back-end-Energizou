@@ -8,6 +8,7 @@ export class CreateCompanyController {
     const companyBodySchema = z.object({
       NomedoCliente: z.string(),
       Senha: z.string().min(6),
+      NomedaEmpresa: z.string(),
       CNPJ: z.string(),
       CEP: z.string(),
       Endereco: z.string(),
@@ -19,6 +20,7 @@ export class CreateCompanyController {
     const {
       NomedoCliente,
       Senha,
+      NomedaEmpresa,
       CNPJ,
       CEP,
       Endereco,
@@ -39,6 +41,7 @@ export class CreateCompanyController {
       const newCompany = companyRepository.create({
         NomedoCliente,
         Senha: password_hash,
+        NomedaEmpresa,
         CNPJ,
         CEP,
         Endereco,

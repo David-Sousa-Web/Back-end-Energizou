@@ -11,6 +11,9 @@ export class Company {
   @Column({ type: "text", nullable: false })
   Senha: string;
 
+  @Column({ type: "text" })
+  NomedaEmpresa: string;
+
   @Column({ type: "text", nullable: false })
   CNPJ: string;
 
