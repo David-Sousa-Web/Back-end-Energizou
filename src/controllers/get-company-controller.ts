@@ -9,7 +9,7 @@ export class GetCompanyController {
       return res.json(company);
     } catch (error) {
       console.log(error);
-      res.status(500).json({ message: "Error while retrieving tasks." });
+      res.status(500).json({ message: "Error while retrieving Company." });
     }
   }
 }

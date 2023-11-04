@@ -38,11 +38,13 @@ export class CreateCompanyController {
     const password_hash = await hash(Senha, 6);
 
     try {
+      const cnpjSemCaracteresEspeciais = CNPJ.replace(/[^\d]+/g, "");
+
       const newCompany = companyRepository.create({
         NomedoCliente,
         Senha: password_hash,
         NomedaEmpresa,
-        CNPJ,
+        CNPJ: cnpjSemCaracteresEspeciais,
         CEP,
         Endereco,
         Numero,
