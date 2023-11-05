@@ -1,24 +1,24 @@
-## Back-end-Energizou
+# Back-end-Energizou
 
-# como começar:
+## como começar:
 
 ```bash
 npm install
 ```
-# DB:
+## DB:
 
 ```bash
 docker compose up -d
 Mysql
 ```
 
-# para iniciar as migrations
+## para iniciar as migrations
 
 ```bash
 npm run migration:run
 ```
 
-# para iniciar localmente:
+## para iniciar localmente:
 
 ```bash
 npm run start:dev
