@@ -9,7 +9,6 @@ npm install
 
 ```bash
 docker compose up -d
-Mysql
 ```
 
 ## para iniciar as migrations
